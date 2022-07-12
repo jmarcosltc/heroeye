@@ -105,7 +105,7 @@ export default function Calculator() {
     
         }
 
-        for (let i = 0; i < dropRolls; i++) {
+        for (let i = 0; i < 1000000; i++) {
             firstRoll()
         }
 
@@ -160,15 +160,20 @@ export default function Calculator() {
                 <input type="number" aria-label="Ex: 450" pattern="[0-9]+" onChange={(e) => setMagicFind(e.target.value)}/>
             </div>
 
-            <div>
+            {/* <div>
                 <p>Number of rolls: </p>
                 <input type="number" aria-label="Ex: 450" pattern="[0-9]+" onChange={(e) => setDropRolls(e.target.value)}/>
-            </div>
-
+            </div> */}
 
                 <h1>Magic find: {magicFind}%</h1>
 
-                <button onClick={() => calculateOdds()}> Calculate the odds </button>
+                <button onClick={() => calculateOdds()} style={{
+                    backgroundColor: '#2f536e',
+                    border: 'none',
+                    padding: '10px',
+                    color: 'white',
+                    borderRadius: '2px'
+                }}> Calculate the odds </button>
 
                 <h2>Not Satanic: {notSatanic}</h2>
                 <h2>Tier B: {B}</h2>
@@ -176,12 +181,10 @@ export default function Calculator() {
                 <h2>Tier S: {S}</h2>
                 <h2>Tier HEROIC: {CHASE}</h2>
                 <h2> Tier ANGELIC: {ANGELIC}</h2>
-                
-            
-            
+   
             <br/>
             <h1>Probability chart: </h1>
-            <ResponsiveContainer width="99%" aspect={8}>
+            <ResponsiveContainer width="99%" aspect={5}>
             <PieChart width={800} height={300}>
                 <Pie
                     data={data}
