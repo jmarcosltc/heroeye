@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/heroeye/static/css/main.073c9b0a.css",
-    "main.js": "/heroeye/static/js/main.bc7747f8.js",
+    "main.js": "/heroeye/static/js/main.c747e05d.js",
     "static/js/787.9abd9eb9.chunk.js": "/heroeye/static/js/787.9abd9eb9.chunk.js",
     "index.html": "/heroeye/index.html",
     "main.073c9b0a.css.map": "/heroeye/static/css/main.073c9b0a.css.map",
-    "main.bc7747f8.js.map": "/heroeye/static/js/main.bc7747f8.js.map",
+    "main.c747e05d.js.map": "/heroeye/static/js/main.c747e05d.js.map",
     "787.9abd9eb9.chunk.js.map": "/heroeye/static/js/787.9abd9eb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.bc7747f8.js"
+    "static/js/main.c747e05d.js"
   ]
 }
