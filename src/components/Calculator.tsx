@@ -168,7 +168,7 @@ export default function Calculator() {
 
                 <h1>Magic find: {magicFind}%</h1>
 
-                <button onClick={() => calculateOdds()}>Calculate the odds</button>
+                <button onClick={() => calculateOdds()}> Calculate the odds </button>
 
                 <h2>Not Satanic: {notSatanic}</h2>
                 <h2>Tier B: {B}</h2>
