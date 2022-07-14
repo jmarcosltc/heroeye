@@ -177,7 +177,7 @@ export default function Calculator() {
                     borderRadius: '2px'
                 }}> Calculate the odds </button>
 
-                <h2 style={{color: '#c9d3d6'}}>Not Satanic: {notSatanic}</h2>
+                <h2 style={{color: '#c9d3d6'}}>Not Satanic: {notSatanic}%</h2>
                 <h2 style={{color: '#8c5053'}}> Tier B: {B}%</h2>
                 <h2 style={{color: '#4f191b'}}> Tier A: {A}%</h2>
                 <h2 style={{color: '#bd111a'}}> Tier S: {S}%</h2>
