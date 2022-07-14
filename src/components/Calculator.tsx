@@ -109,12 +109,12 @@ export default function Calculator() {
             firstRoll()
         }
 
-        setNotSatanic(changingNS)
-        setB(changingB)
-        setA(changingA)
-        setS(changingS)
-        setCHASE(changingCHASE)
-        setANGELIC(changingANGELIC)
+        setNotSatanic(Math.floor(changingNS/1000000 * 100))
+        setB(Math.floor(changingB/1000000 * 100))
+        setA(Math.floor(changingA/1000000 * 100))
+        setS(Math.floor(changingS/1000000 * 100))
+        setCHASE(Math.floor(changingCHASE/1000000 * 100))
+        setANGELIC(Math.floor(changingANGELIC/1000000 * 100))
 
     }
 
@@ -136,7 +136,7 @@ export default function Calculator() {
         { name: 'Group ANGELIC', value: ANGELIC },
       ];
 
-    const COLORS = ['#a83246', '#a83293', '#FFBB28', '#3279a8', '#171761', '#34eb34'];
+    const COLORS = ['#c9d3d6', '#8c5053', '#4f191b', '#bd111a', '#1db1de', '#cfba7c'];
 
     const RADIAN = Math.PI / 180;
     const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index } : {cx: any, cy: any, midAngle: any, innerRadius: any, outerRadius: any,
@@ -155,7 +155,9 @@ export default function Calculator() {
     return(
         <>
 
-            <div>
+            <div style={{
+                zIndex: 1
+            }}>
                 <p>Magic find value: </p>
                 <input type="number" aria-label="Ex: 450" pattern="[0-9]+" onChange={(e) => setMagicFind(e.target.value)}/>
             </div>
@@ -175,15 +177,14 @@ export default function Calculator() {
                     borderRadius: '2px'
                 }}> Calculate the odds </button>
 
-                <h2>Not Satanic: {notSatanic}</h2>
-                <h2>Tier B: {B}</h2>
-                <h2>Tier A: {A}</h2>
-                <h2>Tier S: {S}</h2>
-                <h2>Tier HEROIC: {CHASE}</h2>
-                <h2> Tier ANGELIC: {ANGELIC}</h2>
+                <h2 style={{color: '#c9d3d6'}}>Not Satanic: {notSatanic}</h2>
+                <h2 style={{color: '#8c5053'}}> Tier B: {B}%</h2>
+                <h2 style={{color: '#4f191b'}}> Tier A: {A}%</h2>
+                <h2 style={{color: '#bd111a'}}> Tier S: {S}%</h2>
+                <h2 style={{color: '#1db1de'}}> Tier HEROIC: {CHASE}%</h2>
+                <h2 style={{color: '#cfba7c'}}> Tier ANGELIC: {ANGELIC}%</h2>
    
             <br/>
-            <h1>Probability chart: </h1>
             <ResponsiveContainer width="99%" aspect={5}>
             <PieChart width={800} height={300}>
                 <Pie
